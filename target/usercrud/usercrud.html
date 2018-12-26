@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/usercrud/css/jquery.autotabs.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/usercrud/css/usercrud.css"/>
+  <script type="text/javascript" src="/usercrud/js/usercrud.js"></script>
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+	<li><a id="veditutti" href="#tabs-5">Vedi tutti gli utenti</a></li>
+  
+    <li><a id="ricercautente" href="#tabs-1">Ricerca un utente</a></li>
+    <li><a id="insertutente" href="#tabs-2">Inserisci un utente</a></li>
+    <li><a id="cancellautente" href="#tabs-3">Cancella un utente</a></li>
+	<li><a id="updateutente" href="#tabs-4">Aggiorna un utente</a></li>
+  </ul>  
+  <div id="tabs-1">
+	<p><i>Seleziona l'utente e carica i suoi dati</i></p>
+	<p>Username: <select id="ricercautente_username"></select> <input id="ricercautente_but" type="button" value="Ricerca"/></p>
+    <table id="result-ricercautente"></table>  
+  </div>   
+  <div id="tabs-2">
+	<p><i>Inserisci i dati nei campi e inserisci</i></p>
+	<p><i>Username può essere composto da lettere, numeri, "_","-" e deve avere una lunghezza da 3 a 16 caratteri</i></p>
+	<p><i>Password può essere composto da lettere, numeri, "_","-" e deve avere una lunghezza da 6 a 18 caratteri</i></p>
+	<p><i>Ruolo può essere composto da lettere, numeri, "_","-" e deve avere una lunghezza da 6 a 10 caratteri</i></p>
+	<p>Username: <input id="insertutente_username"></input></p>
+	<p>Password: <input id="insertutente_password"></input></p>
+	<p>Ruolo:    <input id="insertutente_ruolo"></input></p>
+	<p><input id="insertutente_but" type="button" value="inserisci"/><input id="annulla_insertutente_but" type="button" value="annulla"/></p>
+	<div id="result-insertutente"></div>
+  </div>
+  <div id="tabs-3">
+    <p><i>Scegli l'utente che vuoi eliminare</i></p>
+    <p>Username: <select id="cancellautente_username"><option value="scegli">Scegli uno username</option></select> <input id="cancellautente_but" type="button" value="Cancella"/></p>
+    <div id="result-cancellautente"></div>  
+  </div>
+  <div id="tabs-4">
+	<p><i>Seleziona un utente e modifica la password e/o il ruolo</i></p>
+	<p><i>Password può essere composto da lettere, numeri, "_","-" e deve avere una lunghezza da 6 a 18 caratteri</i></p>
+	<p><i>Ruolo può essere composto da lettere, numeri, "_","-" e deve avere una lunghezza da 6 a 10 caratteri</i></p>
+	
+	<p>Username: <select id="updateutente_username"></select> <input id="selupdateutente_but" type="button" value="carica i dati"/></p>
+	<p>Password: <input id="updateutente_password"></input></p>
+	<p>Ruolo:    <input id="updateutente_ruolo"></input></p>
+	<p><input id="updateutente_but" type="button" value="aggiorna"/><input id="annulla_updateutente_but" type="button" value="annulla"/></p>
+	<div id="result-updateutente"></div>
+  </div>
+  <div id="tabs-5">
+    <p><i>Sotto sono elencati gli utenti presenti nel db.</i></p>
+    <table id="result-veditutti"></table>
+  </div>
+</div>
+ 
+ 
+</body>
+</html>

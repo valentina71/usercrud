@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Zanichelli test</display-name>
+   <servlet>
+        <servlet-name>jerseyServlet</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>it.zanichelli.garotta.usercrud.controller</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup> 
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jerseyServlet</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping> 
+<resource-ref>
+      <description>DB Connection</description>
+      <res-ref-name>jdbc/ZanichelliDB</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+  </resource-ref>
+    
+</web-app>

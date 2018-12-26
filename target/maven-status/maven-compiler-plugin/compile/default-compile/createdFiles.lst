@@ -1,0 +1,9 @@
+it\zanichelli\garotta\usercrud\controller\AccountResource.class
+it\zanichelli\garotta\usercrud\model\Account.class
+it\zanichelli\garotta\usercrud\model\Response.class
+it\zanichelli\garotta\usercrud\dao\JDBCConnection.class
+it\zanichelli\garotta\usercrud\exception\AccountException.class
+it\zanichelli\garotta\usercrud\model\ListUsername.class
+it\zanichelli\garotta\usercrud\reponse\MessageResponse.class
+it\zanichelli\garotta\usercrud\model\ListAccount.class
+it\zanichelli\garotta\usercrud\dao\AccountDao.class
